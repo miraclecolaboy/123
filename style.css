@@ -1,0 +1,43 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    word-wrap: break-word;
+}
+th {
+    background-color: #f4f4f4;
+}
+.input-field {
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+}
+.btn {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+select {
+    padding: 5px;
+    margin: 5px;
+    font-size: 16px;
+}
+.hide {
+    display: none;
+}
+.action-buttons {
+    display: flex;
+    justify-content: center;
+}

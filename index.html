@@ -1,0 +1,73 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店铺管理系统</title>
+    <link rel="stylesheet" href="style.css"> <!-- 引入外部CSS -->
+</head>
+<body>
+
+    <h2>店铺管理系统</h2>
+
+    <!-- 商品管理 -->
+    <h3>商品管理</h3>
+    <input class="input-field" id="productName" type="text" placeholder="商品名">
+    <input class="input-field" id="productStock" type="number" placeholder="库存">
+    <input class="input-field" id="productPrice" type="number" placeholder="价格">
+    <input class="input-field" id="memberPrice" type="number" placeholder="会员价">
+    <button class="btn" onclick="addProduct()">添加商品</button>
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>商品名</th>
+                <th>库存</th>
+                <th>价格</th>
+                <th>会员价</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- 会员管理 -->
+    <h3>会员管理</h3>
+    <input class="input-field" id="memberName" type="text" placeholder="会员名">
+    <input class="input-field" id="memberPhone" type="text" placeholder="电话">
+    <input class="input-field" id="memberBalance" type="number" placeholder="账户余额">
+    <button class="btn" onclick="addMember()">添加会员</button>
+    <table id="memberTable">
+        <thead>
+            <tr>
+                <th>会员名</th>
+                <th>电话</th>
+                <th>账户余额</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- 销售功能 -->
+    <h3>销售功能</h3>
+    <select id="productSelector" class="input-field">
+        <option value="">选择商品</option>
+    </select>
+    <select id="memberSelector" class="input-field">
+        <option value="">选择会员</option>
+    </select>
+    <input class="input-field" id="salePrice" type="number" placeholder="自定义价格">
+    <input class="input-field" id="saleQuantity" type="number" value="1" min="1" placeholder="销售数量">
+    <button class="btn" onclick="processSale('member')">会员销售</button>
+    <button class="btn" onclick="processSale('normal')">普通销售</button>
+    <button class="btn" onclick="toggleSalesAmount()">显示/隐藏 销售额统计</button>
+
+    <!-- 销售额统计 -->
+    <h3 id="salesAmountSection" class="hide">销售额统计: <span id="totalSalesAmount">¥0</span> 总销售额</h3>
+    <h3>商品销售额：</h3>
+    <ul id="productSalesAmount" class="hide"></ul> <!-- 默认隐藏商品销售额部分 -->
+
+    <script src="script.js"></script> <!-- 引入外部JS -->
+</body>
+</html>

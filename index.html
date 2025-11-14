@@ -10,6 +10,20 @@
 
     <h2>店铺管理系统</h2>
 
+     <!-- 销售功能 -->
+    <h3>销售功能</h3>
+    <select id="productSelector" class="input-field">
+        <option value="">选择商品</option>
+    </select>
+    <select id="memberSelector" class="input-field">
+        <option value="">选择会员</option>
+    </select>
+    <input class="input-field" id="salePrice" type="number" placeholder="自定义价格">
+    <input class="input-field" id="saleQuantity" type="number" value="1" min="1" placeholder="销售数量">
+    <button class="btn" onclick="processSale('member')">会员销售</button>
+    <button class="btn" onclick="processSale('normal')">普通销售</button>
+    <button class="btn" onclick="toggleSalesAmount()">显示/隐藏 销售额统计</button>
+
     <!-- 商品管理 -->
     <h3>商品管理</h3>
     <input class="input-field" id="productName" type="text" placeholder="商品名">
@@ -48,19 +62,7 @@
         <tbody></tbody>
     </table>
 
-    <!-- 销售功能 -->
-    <h3>销售功能</h3>
-    <select id="productSelector" class="input-field">
-        <option value="">选择商品</option>
-    </select>
-    <select id="memberSelector" class="input-field">
-        <option value="">选择会员</option>
-    </select>
-    <input class="input-field" id="salePrice" type="number" placeholder="自定义价格">
-    <input class="input-field" id="saleQuantity" type="number" value="1" min="1" placeholder="销售数量">
-    <button class="btn" onclick="processSale('member')">会员销售</button>
-    <button class="btn" onclick="processSale('normal')">普通销售</button>
-    <button class="btn" onclick="toggleSalesAmount()">显示/隐藏 销售额统计</button>
+   
 
     <!-- 销售额统计 -->
     <h3 id="salesAmountSection" class="hide">销售额统计: <span id="totalSalesAmount">¥0</span> 总销售额</h3>
